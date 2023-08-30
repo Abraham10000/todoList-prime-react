@@ -53,7 +53,7 @@
   }
   
   .task-manager {
-    max-width: 1200px; /* Augmentez la largeur du conteneur principal */
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 20px;
   }
