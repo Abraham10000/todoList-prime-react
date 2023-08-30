@@ -1,13 +1,22 @@
 import React from 'react';
+import { Button } from 'primereact/button';
 
 const TaskItem = ({ task, onRemoveTask, onToggleTask }) => {
   return (
     <div className="task-item">
-      <label>
-        <input type="checkbox" onChange={onToggleTask} />
-        {task}
-      </label>
-      <button onClick={onRemoveTask}><i className="fa fa-trash"></i></button>
+      <p>{task.task}</p>
+      <div className="task-buttons">
+        <Button
+          icon="pi pi-check"
+          className="p-button-success"
+          onClick={onToggleTask}
+        />
+        <Button
+          icon="pi pi-trash"
+          className="p-button-danger"
+          onClick={onRemoveTask}
+        />
+      </div>
     </div>
   );
 };
